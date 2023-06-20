@@ -63,8 +63,8 @@
   <!-- END favicon -->
 
   <!-- css link -->
-  <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css" />
+  <!-- <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css" /> -->
   <link rel="stylesheet" href="./assets/css/custom/ui.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="./assets/js/custom/tailwind.config.js"></script>
@@ -72,21 +72,40 @@
 
 <body>
   <div id="app">
+    <div class="bg-wrap">
+      <img src="" alt="background-image" class="bg-img bg-trans">
+    </div>
     <div id="page" class="todo-main-page">
       <!-- header -->
       <header class="todo-header">
         <div class="header-inner">
-          날씨들어갈헤더
+          <p style="font-size: 50px;">날씨api들어갈헤더</p>
         </div>
       </header>
       <!-- END header -->
       <!-- content -->
-      <!-- FIXME: 시안 구조에 따라 panel이나 l-center 구조 변경 -->
-      <div class="page-container">
-        <div class="todo-main-section">
-          <div class="l-center">
-            <div class="panel">
-              투두리스트
+      <div class="main-wrap">
+        <div class="page-container">
+          <div class="todo-main-section">
+            <div class="l-center">
+              <!-- 시계 -->
+              <div class="todo-clock-wrap">
+                <h2 class="todo-clock-title"></h2>
+              </div>
+              <!-- END 시계 -->
+              <!-- 인사말 -->
+              <div id="helloWrap" class="hello-wrap">
+                <div class="hello-input-wrap">
+                  <div class="input-wrap">
+                    <input id="userNameInput" class="input" type="text" class="" placeholder="이름이 어떻게 되시나요?">
+                  </div>
+                </div>
+                <div class="hello-ouput-wrap">
+                  <span id="helloTxt" class="hello-txt">Hello</span>,
+                  <span id="helloName" class="hello-txt">관수</span>
+                </div>
+              </div>
+              <!-- END 인사말 -->
             </div>
           </div>
         </div>
@@ -95,6 +114,15 @@
     <!-- END page -->
   </div>
   <!-- <script src="./assets/js/custom/ui.js"></script> -->
+  <script src="./assets/js/custom/clock.js"></script>
+  <script src="./assets/js/custom/bg.js"></script>
+  <script src="./assets/js/custom/hello.js"></script>
+
+
 </body>
+
+<script>
+
+</script>
 
 </html>

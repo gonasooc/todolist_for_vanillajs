@@ -1,12 +1,61 @@
-/* =================== header =================== */
-.default-header {
+// animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// layout
+#app {
+  min-height: 100%;
+}
+
+#page {
+  min-height: 100%;
+}
+
+.l-center {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+// common
+.bg-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
-  background-color: #fff;
+  height: 100%;
+
+  .bg-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bg-trans {
+    animation: fadeIn .5s linear;
+  }
+}
+
+// header
+.todo-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  width: 100%;
 }
 
 .header-inner {
-  max-width: 1200px;
-  height: 90px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 16px;
 
@@ -16,4 +65,50 @@
   }
 }
 
-/* =================== main =================== */
+// main
+.todo-main-page {
+  z-index: 1;
+  position: relative;
+}
+
+.main-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px; // temp
+}
+
+.todo-clock-wrap {
+
+  .todo-clock-title {
+    text-align: center;
+    font-size: 100px;
+    font-variant-numeric: tabular-nums;
+    color: #fff;
+    font-weight: 800;
+  }
+}
+
+.hello-wrap {
+  margin-top: 100px; // temp
+
+  &.is-saved {
+
+    .hello-input-wrap {
+      display: none;
+    }
+
+    .hello-ouput-wrap {
+      display: block;
+    }
+  }
+
+  .hello-ouput-wrap {
+    display: none;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
