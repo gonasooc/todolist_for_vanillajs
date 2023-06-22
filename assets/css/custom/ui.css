@@ -495,6 +495,12 @@ html.ie .scroll-custom {
   background-repeat: no-repeat;
 }
 
+.icon-del {
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1024 1024' fill='%23ffffff' class='icon' version='1.1' xmlns='http://www.w3.org/2000/svg' stroke='%23ffffff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M512 897.6c-108 0-209.6-42.4-285.6-118.4-76-76-118.4-177.6-118.4-285.6 0-108 42.4-209.6 118.4-285.6 76-76 177.6-118.4 285.6-118.4 108 0 209.6 42.4 285.6 118.4 157.6 157.6 157.6 413.6 0 571.2-76 76-177.6 118.4-285.6 118.4z m0-760c-95.2 0-184.8 36.8-252 104-67.2 67.2-104 156.8-104 252s36.8 184.8 104 252c67.2 67.2 156.8 104 252 104 95.2 0 184.8-36.8 252-104 139.2-139.2 139.2-364.8 0-504-67.2-67.2-156.8-104-252-104z' fill=''%3E%3C/path%3E%3Cpath d='M707.872 329.392L348.096 689.16l-31.68-31.68 359.776-359.768z' fill=''%3E%3C/path%3E%3Cpath d='M328 340.8l32-31.2 348 348-32 32z' fill=''%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+}
+
 /* ========== END icon 관련 스타일 ========== */
 @-webkit-keyframes fadeIn {
   from {
@@ -521,9 +527,20 @@ html.ie .scroll-custom {
 }
 
 .l-center {
-  max-width: 1080px;
+  width: 600px;
   margin: 0 auto;
   padding: 0 16px;
+}
+@media all and (max-width: 600px) {
+  .l-center {
+    width: 95%;
+  }
+}
+@media all and (max-width: 600px) {
+  .l-center {
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 .bg-wrap {
@@ -593,6 +610,9 @@ html.ie .scroll-custom {
           align-items: center;
   padding-top: 200px;
 }
+.main-wrap .page-container {
+  width: 100%;
+}
 
 .todo-clock-wrap .todo-clock-title {
   text-align: center;
@@ -600,6 +620,11 @@ html.ie .scroll-custom {
   font-variant-numeric: tabular-nums;
   color: #fff;
   font-weight: 800;
+}
+@media all and (max-width: 600px) {
+  .todo-clock-wrap .todo-clock-title {
+    font-size: 60px;
+  }
 }
 
 .hello-wrap {
@@ -610,6 +635,7 @@ html.ie .scroll-custom {
 }
 .hello-wrap.is-saved .hello-ouput-wrap {
   display: block;
+  padding-bottom: 20px;
 }
 .hello-wrap .hello-ouput-wrap {
   display: none;
@@ -617,4 +643,65 @@ html.ie .scroll-custom {
   text-align: center;
   font-size: 40px;
   font-weight: 600;
+}
+
+.todo-list-wrap {
+  padding-top: 10px;
+}
+
+.todo-list-input-grp {
+  margin-bottom: 20px;
+}
+
+.todo-list-output-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+.todo-list-output-list.is-checked .todo-list-output-txt {
+  text-decoration: line-through;
+}
+.todo-list-output-list .todo-list-output-left-grp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5px;
+  width: calc(100% - 30px);
+}
+.todo-list-output-list .todo-list-output-check-grp {
+  padding-top: 4px;
+}
+.todo-list-output-list .todo-list-output-check-grp .checkInput {
+  width: 18px;
+  height: 18px;
+}
+.todo-list-output-list .todo-list-output-txt-grp .todo-list-output-txt {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  word-break: break-all;
+}
+.todo-list-output-list .todo-list-output-right-grp {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.todo-list-output-list .todo-list-output-btn-grp .denBtn {
+  display: block;
+  width: 25px;
+  height: 25px;
 }

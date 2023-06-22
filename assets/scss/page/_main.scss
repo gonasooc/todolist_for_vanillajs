@@ -19,9 +19,18 @@
 }
 
 .l-center {
-  max-width: 1080px;
+  width: 600px;
   margin: 0 auto;
   padding: 0 16px;
+
+  @include media(600px) {
+    width: 95%;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 // common
@@ -85,6 +94,10 @@
   justify-content: center;
   align-items: center;
   padding-top: 200px; // temp
+
+  .page-container {
+    width: 100%;
+  }
 }
 
 .todo-clock-wrap {
@@ -95,6 +108,10 @@
     font-variant-numeric: tabular-nums;
     color: #fff;
     font-weight: 800;
+
+    @include media(600px) {
+      font-size: 60px;
+    }
   }
 }
 
@@ -109,6 +126,7 @@
 
     .hello-ouput-wrap {
       display: block;
+      padding-bottom: 20px;
     }
   }
 
@@ -118,5 +136,70 @@
     text-align: center;
     font-size: 40px;
     font-weight: 600;
+  }
+}
+
+.todo-list-wrap {
+  padding-top: 10px;
+}
+
+.todo-list-input-grp {
+  margin-bottom: 20px;
+}
+
+.todo-list-output-grp {}
+
+.todo-list-output-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+
+  &.is-checked {
+
+    .todo-list-output-txt {
+      text-decoration: line-through;
+    }
+  }
+
+  .todo-list-output-left-grp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    width: calc(100% - 30px);
+  }
+
+  .todo-list-output-check-grp {
+    padding-top: 4px;
+
+    .checkInput {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .todo-list-output-txt-grp {
+
+    .todo-list-output-txt {
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      word-break: break-all;
+    }
+  }
+
+  .todo-list-output-right-grp {
+    flex-shrink: 0;
+  }
+
+  .todo-list-output-btn-grp {
+
+    .denBtn {
+      display: block;
+      width: 25px;
+      height: 25px;
+    }
   }
 }
