@@ -1,0 +1,10 @@
+{
+  "homepage": "gonasooc.github.io/todolist_for_vanillajs/",
+  "script": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
